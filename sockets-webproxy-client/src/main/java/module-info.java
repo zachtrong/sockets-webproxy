@@ -1,4 +1,4 @@
-module com.nhom2.socketswebproxy {
+module com.groupsecond.socketswebproxy {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -10,6 +10,6 @@ module com.nhom2.socketswebproxy {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens com.nhom2.socketswebproxy to javafx.fxml;
-    exports com.nhom2.socketswebproxy;
+    opens com.groupsecond.socketswebproxy to javafx.fxml;
+    exports com.groupsecond.socketswebproxy;
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.web.WebView?>
 <?import javafx.scene.control.TextField?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.nhom2.socketswebproxy.SocketsController">
+      fx:controller="com.groupsecond.socketswebproxy.SocketsController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>

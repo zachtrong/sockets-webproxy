@@ -1,4 +1,4 @@
-package com.nhom2.socketswebproxy;
+package com.groupsecond.socketswebproxy;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

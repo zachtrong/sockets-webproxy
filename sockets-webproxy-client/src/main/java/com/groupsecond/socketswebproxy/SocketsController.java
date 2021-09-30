@@ -1,4 +1,4 @@
-package com.nhom2.socketswebproxy;
+package com.groupsecond.socketswebproxy;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
