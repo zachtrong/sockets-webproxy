@@ -1,25 +1,19 @@
+package com.groupsecond.socketswebproxycommon;
+
+import com.google.gson.Gson;
+
 import java.io.*;
 
-public class ServerApplication{
+public class SerializationService {
 
-    public static void test() throws IOException {
-        System.out.println("Server side TCP socket");
-
-        ServerResponse serverResponse = new ServerResponse("abc", "def", "ghi");
-
-        System.out.println("Convert object to byte array: " + serializeObjectToByteArray(serverResponse));
-
-        ServerResponse serverResponse2 = (ServerResponse) deserializeByteArrayToObject(serializeObjectToByteArray(serverResponse));
-
-        System.out.println("Get Session ID from Object: " + serverResponse2.getSessionId());
-        System.out.println("Get URL from Object: " + serverResponse2.getUrl());
-        System.out.println("Get Content from Object: " + serverResponse2.getContent());
+    public static String serializeObjectToJson(Object object) throws IOException {
+        return new Gson().toJson(object);
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        SocketServer server = new SocketServer();
-        server.start(6666);
+    public static ClientRequest deserializeJsonToClientRequest(String json) {
+        return new Gson().fromJson(json, ClientRequest.class);
     }
+
 
     public static byte[] serializeObjectToByteArray(Object yourObject) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -60,5 +54,4 @@ public class ServerApplication{
         }
         return o;
     }
-
 }

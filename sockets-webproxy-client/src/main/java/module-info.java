@@ -9,7 +9,9 @@ module com.groupsecond.socketswebproxy {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.google.gson;
+    requires com.groupsecond.socketswebproxycommon;
 
-    opens com.groupsecond.socketswebproxy to javafx.fxml;
-    exports com.groupsecond.socketswebproxy;
+    opens com.groupsecond.socketswebproxyclient to javafx.fxml;
+    exports com.groupsecond.socketswebproxyclient;
 }

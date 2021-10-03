@@ -1,4 +1,4 @@
-package com.groupsecond.socketswebproxy;
+package com.groupsecond.socketswebproxyclient;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,8 +17,14 @@ public class SocketsController {
     private Label welcomeText;
 
     @FXML
-    public void onLoadButtonClick(ActionEvent actionEvent) {
+    public void onLoadUrlButtonClick(ActionEvent actionEvent) {
         welcomeText.setText("Loading " + textInput.getText() + " in server IP address" + IPAddress.getText());
-        socketsWebview.getEngine().load(textInput.getText());
+//        socketsWebview.getEngine().load(textInput.getText());
+
+    }
+
+    @FXML
+    public void onConnectServerButtonClick(ActionEvent actionEvent) {
+
     }
 }

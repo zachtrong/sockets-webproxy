@@ -21,6 +21,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.groupsecond</groupId>
+            <artifactId>sockets-webproxy-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>11.0.2</version>
@@ -83,6 +88,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>11.0.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -105,7 +115,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.groupsecond.socketswebproxy/com.groupsecond.socketswebproxy.SocketsApplication</mainClass>
+                            <mainClass>com.groupsecond.socketswebproxy/SocketsApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>

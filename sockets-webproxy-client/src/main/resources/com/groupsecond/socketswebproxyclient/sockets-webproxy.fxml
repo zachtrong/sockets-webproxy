@@ -8,7 +8,7 @@
 
 <?import java.net.URL?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.groupsecond.socketswebproxy.SocketsController" styleClass="header-section">
+      fx:controller="com.groupsecond.socketswebproxyclient.SocketsController" styleClass="header-section">
     <padding>
         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
     </padding>
@@ -22,7 +22,8 @@
         <TextField fx:id="IPAddress" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     </GridPane>
 
-    <Button text="Load" onAction="#onLoadButtonClick"/>
+    <Button text="Load URL" onAction="#onLoadUrlButtonClick"/>
+    <Button text="Connect Server" onAction="#onConnectServerButtonClick"/>
 
     <WebView fx:id="socketsWebview"/>
     <stylesheets>
