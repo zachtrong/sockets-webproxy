@@ -1,19 +1,19 @@
+package com.groupsecond.socketswebproxy;
+
 import java.io.*;
 
-public class ServerApplication{
-
+public class ClientApplication {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         System.out.println("Server side TCP socket");
 
-        ServerResponse serverResponse = new ServerResponse("abc", "def", "ghi");
+        ClientRequest serverResponse = new ClientRequest("abc", "def");
 
         System.out.println("Convert object to byte array: " + serializeObjectToByteArray(serverResponse));
 
-        ServerResponse serverResponse2 = (ServerResponse) deserializeByteArrayToObject(serializeObjectToByteArray(serverResponse));
+        ClientRequest serverResponse2 = (ClientRequest) deserializeByteArrayToObject(serializeObjectToByteArray(serverResponse));
 
         System.out.println("Get Session ID from Object: " + serverResponse2.getSessionId());
         System.out.println("Get URL from Object: " + serverResponse2.getUrl());
-        System.out.println("Get Content from Object: " + serverResponse2.getContent());
 
     }
 
@@ -56,5 +56,4 @@ public class ServerApplication{
         }
         return o;
     }
-
 }
