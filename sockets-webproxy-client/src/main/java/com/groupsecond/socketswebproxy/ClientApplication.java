@@ -10,7 +10,7 @@ public class ClientApplication {
 
         System.out.println("Convert object to byte array: " + serializeObjectToByteArray(serverResponse));
 
-        ClientRequest serverResponse2 = (ClientRequest) deserializeObjectToByteArray(serializeObjectToByteArray(serverResponse));
+        ClientRequest serverResponse2 = (ClientRequest) deserializeByteArrayToObject(serializeObjectToByteArray(serverResponse));
 
         System.out.println("Get Session ID from Object: " + serverResponse2.getSessionId());
         System.out.println("Get URL from Object: " + serverResponse2.getUrl());
@@ -35,7 +35,7 @@ public class ClientApplication {
         }
     }
 
-    public static Object deserializeObjectToByteArray(byte[] yourBytes) throws IOException {
+    public static Object deserializeByteArrayToObject(byte[] yourBytes) throws IOException {
         ByteArrayInputStream bis = new ByteArrayInputStream(yourBytes);
         ObjectInput in = null;
         Object o = new Object();
