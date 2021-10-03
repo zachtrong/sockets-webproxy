@@ -2,7 +2,7 @@ import java.io.*;
 
 public class ServerApplication{
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
+    public static void test() throws IOException {
         System.out.println("Server side TCP socket");
 
         ServerResponse serverResponse = new ServerResponse("abc", "def", "ghi");
@@ -14,7 +14,11 @@ public class ServerApplication{
         System.out.println("Get Session ID from Object: " + serverResponse2.getSessionId());
         System.out.println("Get URL from Object: " + serverResponse2.getUrl());
         System.out.println("Get Content from Object: " + serverResponse2.getContent());
+    }
 
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
+        SocketServer server = new SocketServer();
+        server.start(6666);
     }
 
     public static byte[] serializeObjectToByteArray(Object yourObject) throws IOException {
