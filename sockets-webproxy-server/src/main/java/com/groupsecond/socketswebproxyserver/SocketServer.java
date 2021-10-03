@@ -3,15 +3,18 @@ package com.groupsecond.socketswebproxyserver;
 import com.groupsecond.socketswebproxycommon.ClientRequest;
 import com.groupsecond.socketswebproxycommon.ServerResponse;
 
+import javax.net.ServerSocketFactory;
 import java.net.*;
 import java.io.*;
 
 public class SocketServer {
+    public static final String HOSTNAME = "0.0.0.0";
     private ServerSocket serverSocket;
 
     public void start(int port) {
         try {
-            serverSocket = new ServerSocket(port);
+            serverSocket = ServerSocketFactory.getDefault().createServerSocket();
+            serverSocket.bind(new InetSocketAddress(HOSTNAME, port));
             while (true) {
                 new EchoClientHandler(serverSocket.accept()).start();
             }

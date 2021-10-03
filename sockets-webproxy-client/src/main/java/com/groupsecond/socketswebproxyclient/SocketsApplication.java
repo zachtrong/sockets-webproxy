@@ -15,26 +15,6 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 public class SocketsApplication extends Application {
 
-    public static final int NUM_THREAD_POOL_SIZE = 3;
-    private ScheduledExecutorService ioThread = new ScheduledThreadPoolExecutor(NUM_THREAD_POOL_SIZE);
-
-    private void startSocketService() {
-        ioThread.submit(() -> {
-            SocketClient client = new SocketClient();
-            client.startConnection("127.0.0.1", 6666);
-
-            ClientRequest clientRequest = new ClientRequest("1000000", "https://example.com");
-            try {
-                ServerResponse response = client.sendMessage(clientRequest);
-
-                System.out.println(response);
-            } catch (IOException | ClassNotFoundException e) {
-                e.printStackTrace();
-            }
-        });
-        //client.stopConnection();
-    }
-
     @Override
     public void start(Stage stage) throws IOException {
         WebView webView = new WebView();
@@ -47,8 +27,6 @@ public class SocketsApplication extends Application {
         stage.setTitle("Sockets Web Proxy - Group 2");
         stage.setScene(scene);
         stage.show();
-
-        startSocketService();
     }
 
     public static void main(String[] args) {

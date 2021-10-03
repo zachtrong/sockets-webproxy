@@ -23,6 +23,7 @@
         <dependency>
             <groupId>com.groupsecond</groupId>
             <artifactId>sockets-webproxy-common</artifactId>
+            <scope>compile</scope>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -93,6 +94,12 @@
             <artifactId>javafx-graphics</artifactId>
             <version>11.0.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -115,11 +122,12 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.groupsecond.socketswebproxy/SocketsApplication</mainClass>
+                            <mainClass>com.groupsecond.socketswebproxyclient.SocketsApplication</mainClass>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
         </plugins>
+
     </build>
 </project>

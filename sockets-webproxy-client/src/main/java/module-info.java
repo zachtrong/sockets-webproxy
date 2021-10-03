@@ -11,6 +11,7 @@ module com.groupsecond.socketswebproxy {
     requires eu.hansolo.tilesfx;
     requires com.google.gson;
     requires com.groupsecond.socketswebproxycommon;
+    requires org.jetbrains.annotations;
 
     opens com.groupsecond.socketswebproxyclient to javafx.fxml;
     exports com.groupsecond.socketswebproxyclient;

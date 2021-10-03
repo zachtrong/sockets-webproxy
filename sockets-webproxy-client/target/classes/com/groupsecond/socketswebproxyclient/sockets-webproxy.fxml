@@ -16,14 +16,13 @@
     <Label fx:id="welcomeText"/>
     <GridPane>
         <Text text="URL:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-        <TextField fx:id="textInput" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <TextField fx:id="url" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-        <Text text="Server IP address:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-        <TextField fx:id="IPAddress" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Text text="Server:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="serverUrl" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     </GridPane>
 
     <Button text="Load URL" onAction="#onLoadUrlButtonClick"/>
-    <Button text="Connect Server" onAction="#onConnectServerButtonClick"/>
 
     <WebView fx:id="socketsWebview"/>
     <stylesheets>
