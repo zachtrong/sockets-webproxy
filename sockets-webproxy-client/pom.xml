@@ -126,6 +126,16 @@
                         </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <stripDebug>true</stripDebug>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                    <launcher>socketswebproxy</launcher>
+                    <jlinkImageName>socketswebproxy</jlinkImageName>
+                    <jlinkZipName>socketswebproxyzip</jlinkZipName>
+                    <mainClass>com.groupsecond.socketswebproxyclient.SocketsApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
 
