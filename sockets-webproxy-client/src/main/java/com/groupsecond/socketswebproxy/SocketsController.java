@@ -12,11 +12,13 @@ public class SocketsController {
     @FXML
     public TextField textInput;
     @FXML
+    public TextField IPAddress;
+    @FXML
     private Label welcomeText;
 
     @FXML
     public void onLoadButtonClick(ActionEvent actionEvent) {
-        welcomeText.setText("Loading " + textInput.getText());
+        welcomeText.setText("Loading " + textInput.getText() + " in server IP address" + IPAddress.getText());
         socketsWebview.getEngine().load(textInput.getText());
     }
 }

@@ -1,0 +1,28 @@
+.root {
+    -fx-font-size: 14px;
+    -fx-font-family: sans-serif;
+    -fx-background-color: #ffffff;
+}
+
+.header-section {
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-background-color: lightcyan;
+}
+
+GridPane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-fit-to-width: true;
+    -fx-pref-width: 1000;
+}
+
+TextField {
+    -fx-pref-width: 1500;
+}
+
+Button {
+    -fx-padding: 10 50 10 50;
+    -fx-background-color: dodgerblue;
+}
+

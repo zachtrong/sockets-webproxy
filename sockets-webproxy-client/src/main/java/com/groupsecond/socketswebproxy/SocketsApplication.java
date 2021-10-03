@@ -19,7 +19,7 @@ public class SocketsApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1280,800);
         scene.getRoot().setStyle("-fx-font-family: 'serif'");
 
-        stage.setTitle("Web Proxy");
+        stage.setTitle("Sockets Web Proxy - Group 2");
         stage.setScene(scene);
         stage.show();
     }
