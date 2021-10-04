@@ -52,18 +52,23 @@ public class SocketServer {
                 in.close();
                 out.close();
                 clientSocket.close();
-            } catch (IOException | ClassNotFoundException | InterruptedException e) {
+            } catch (IOException | ClassNotFoundException e) {
                 e.printStackTrace();
             }
         }
 
-        private void processClientRequest(ObjectOutputStream out, ClientRequest clientRequest) throws IOException, InterruptedException {
+        private void processClientRequest(ObjectOutputStream out, ClientRequest clientRequest) throws IOException {
             System.out.println(clientRequest.toString());
 
             ServerResponse response = new ServerResponse();
             response.setSessionId(clientRequest.getSessionId());
             response.setUrl(clientRequest.getUrl());
-            response.setContent(httpService.fetchContentFromUrl(clientRequest.getUrl()));
+
+            try {
+                response.setContent(httpService.fetchContentFromUrl(clientRequest.getUrl()));
+            } catch (IOException | InterruptedException e) {
+                response.setContent(e.getMessage());
+            }
 
             out.writeObject(response);
         }
