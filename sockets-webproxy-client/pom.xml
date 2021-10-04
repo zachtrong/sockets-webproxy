@@ -23,7 +23,6 @@
         <dependency>
             <groupId>com.groupsecond</groupId>
             <artifactId>sockets-webproxy-common</artifactId>
-            <scope>compile</scope>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -13,7 +13,15 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.7.1</junit.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+    <modules>
+        <module>sockets-webproxy-common</module>
+        <module>sockets-webproxy-server</module>
+        <module>sockets-webproxy-client</module>
+    </modules>
 
     <dependencies>
         <dependency>
